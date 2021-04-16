@@ -25,7 +25,9 @@ Flash with `make -f STM32Make.make flash` or manually flash `build/light_sensor.
 
 ## Software
 
-I use [Clight](https://github.com/FedeDP/Clight) to control my monitor's brightness through [DDC](https://en.wikipedia.org/wiki/Display_Data_Channel).
+An [udev rule](utils/51-light-sensor.rules) file is provided to alias the sensor's serial port to `/dev/ttyALS`.
+
+I use [Clight](https://github.com/FedeDP/Clight) to read the sensor and control my monitors' brightness with [DDC](https://en.wikipedia.org/wiki/Display_Data_Channel).
 
 ### Clight config
 
